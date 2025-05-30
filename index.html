@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회사에서 모셔가는 이력서 작성법 - 사전예약</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+        }
+        
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        
+        .fade-in-left {
+            animation: fadeInLeft 0.8s ease-out forwards;
+            opacity: 0;
+            transform: translateX(-30px);
+        }
+        
+        .fade-in-right {
+            animation: fadeInRight 0.8s ease-out forwards;
+            opacity: 0;
+            transform: translateX(30px);
+        }
+        
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-400 { animation-delay: 0.4s; }
+        .delay-600 { animation-delay: 0.6s; }
+        .delay-800 { animation-delay: 0.8s; }
+        .delay-1000 { animation-delay: 1.0s; }
+        
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeInLeft {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes fadeInRight {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        .book-mockup {
+            perspective: 1200px;
+        }
+        
+        .book-cover {
+            transform: rotateY(-15deg) rotateX(5deg);
+            transition: transform 0.3s ease;
+            box-shadow: 
+                20px 20px 40px rgba(0,0,0,0.3),
+                0 0 20px rgba(255,255,255,0.1);
+        }
+        
+        .book-cover:hover {
+            transform: rotateY(-10deg) rotateX(2deg) scale(1.05);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #ffffff 0%, #e5e5e5 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .cta-button {
+            background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%);
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(255,255,255,0.2);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(255,255,255,0.3);
+        }
+        
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.3) 50%, transparent 100%);
+        }
+    </style>
+</head>
+<body class="bg-black text-white overflow-x-hidden">
+    
+    <!-- Hero Section - 문제 제기 + 공감 -->
+    <section class="min-h-screen flex items-center justify-center px-4 py-16">
+        <div class="max-w-4xl mx-auto text-center">
+            <h1 class="text-5xl md:text-7xl font-black mb-8 fade-in-up gradient-text">
+                왜 내 이력서는<br>
+                매번 <span class="text-red-500">광탈</span>할까?
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-300 mb-12 fade-in-up delay-200 leading-relaxed">
+                나만 그런 걸까?<br>
+                다른 사람들은 대체 어떻게 합격하는 걸까?
+            </p>
+            <div class="text-lg text-gray-400 fade-in-up delay-400">
+                매일 밤, 또 다른 불합격 메일을 받으며 자책하는 당신에게
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- 사회적 증거 Section -->
+    <section class="py-20 px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-8 fade-in-up gradient-text">
+                    실제 후기
+                </h2>
+            </div>
+            
+            <div class="bg-gray-900 rounded-2xl p-8 md:p-12 border border-gray-800 fade-in-up delay-200">
+                <div class="flex flex-col md:flex-row items-center gap-12">
+                    <div class="flex-1">
+                        <div class="text-6xl font-black text-red-500 mb-4">"</div>
+                        <p class="text-xl md:text-2xl leading-relaxed mb-8">
+                            <span class="text-red-400 font-semibold">똑같은 개발 역량</span>으로 
+                            <span class="line-through text-gray-500">100개 지원해서 1개 합격</span>하던 제가<br>
+                            <span class="text-green-400 font-semibold">이력서만 바꿨을 뿐</span>인데 
+                            <span class="text-white font-bold">면접을 50개나</span> 봤어요!
+                        </p>
+                        <div class="text-gray-400">
+                            - 엄○○님 (백엔드 개발자, 경력 2년)
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="text-center mb-4">
+                            <div class="text-red-500 font-bold text-lg">Before</div>
+                            <div class="text-4xl font-black">1/100</div>
+                            <div class="text-sm text-gray-400">합격률</div>
+                        </div>
+                        <div class="text-white text-2xl">→</div>
+                        <div class="text-center mt-4">
+                            <div class="text-green-400 font-bold text-lg">After</div>
+                            <div class="text-4xl font-black">50/50</div>
+                            <div class="text-sm text-gray-400">면접 기회</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- 핵심 메시지 Section -->
+    <section class="py-20 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl md:text-5xl font-bold mb-12 fade-in-up gradient-text">
+                아무리 뛰어나도<br>
+                면접관이 알아주지 않으면<br>
+                <span class="text-red-500">아무런 의미가 없습니다</span>
+            </h2>
+            
+            <div class="bg-gradient-to-r from-gray-900 to-black rounded-2xl p-8 md:p-12 border border-gray-700 fade-in-up delay-200">
+                <h3 class="text-2xl md:text-3xl font-bold mb-8 text-white">
+                    면접관 뇌에 내 이력서를<br>
+                    <span class="text-yellow-400">각인시키는 방법!</span>
+                </h3>
+                
+                <div class="grid md:grid-cols-3 gap-8 mt-12">
+                    <div class="text-center fade-in-up delay-400">
+                        <div class="text-4xl mb-4">🎯</div>
+                        <h4 class="font-bold text-lg mb-2">첫인상 장악</h4>
+                        <p class="text-gray-300 text-sm">3초 만에 관심을 끄는 이력서 구조</p>
+                    </div>
+                    <div class="text-center fade-in-up delay-600">
+                        <div class="text-4xl mb-4">💡</div>
+                        <h4 class="font-bold text-lg mb-2">호기심 유발</h4>
+                        <p class="text-gray-300 text-sm">내 이력서를 끝까지 읽게 반들기</p>
+                    </div>
+                    <div class="text-center fade-in-up delay-800">
+                        <div class="text-4xl mb-4">🚀</div>
+                        <h4 class="font-bold text-lg mb-2">이미지 중심 이력서</h4>
+                        <p class="text-gray-300 text-sm">가독성을 200% 끌어올리기</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- 책 소개 Section -->
+    <section class="py-20 px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <div class="lg:w-1/2 book-mockup fade-in-left">
+                    <div class="book-cover">
+                        <img src="./assets/book_cover.png" 
+                             alt="회사에서 모셔가는 이력서 작성법" 
+                             class="w-full max-w-md mx-auto rounded-lg">
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2 fade-in-right">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-8 gradient-text">
+                        회사에서 모셔가는<br>
+                        이력서 작성법
+                    </h2>
+                    
+                    <p class="text-xl text-gray-300 mb-8 leading-relaxed">
+                        면접관의 뇌에 나를 각인시키는 방법<br>
+                        빅테크 스타트업 서류합격 이력서<br>
+                        실제 원본 예시 수록!
+                    </p>
+                    
+                    <div class="bg-gray-900 rounded-xl p-6 mb-8 border border-gray-700">
+                        <h3 class="font-bold text-lg mb-4 text-yellow-400">📖 이런 분들께 추천해요</h3>
+                        <ul class="space-y-2 text-gray-300">
+                            <li>✓ 서류에서 계속 탈락하는 신입/경력 개발자</li>
+                            <li>✓ 이력서 쓸 때마다 막막한 개발자</li>
+                            <li>✓ 면접 기회를 늘리고 싶은 개발자</li>
+                            <li>✓ 빅테크/스타트업 이직을 꿈꾸는 개발자</li>
+                        </ul>
+                    </div>
+                    
+                    <button class="cta-button text-black px-8 py-4 rounded-xl font-bold text-lg w-full md:w-auto" 
+                            onclick="document.getElementById('cta').scrollIntoView({behavior: 'smooth'})">
+                        📚 지금 혜택 받기
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- USP Section -->
+    <section class="py-20 px-4">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 fade-in-up gradient-text">
+                왜 이 책이 특별한가?
+            </h2>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-gray-900 rounded-2xl p-8 border border-gray-700 fade-in-up delay-200">
+                    <div class="text-4xl mb-4">🏆</div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">빅테크 서류 합격 실제 예시</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        토스, 뤼튼, 리멤버 등<br>
+                        빅테크 기업 서류 합격한<br>
+                        <span class="text-yellow-400 font-semibold">실제 이력서 원본</span>을 공개합니다.
+                    </p>
+                </div>
+                
+                <div class="bg-gray-900 rounded-2xl p-8 border border-gray-700 fade-in-up delay-400">
+                    <div class="text-4xl mb-4">👨‍💼</div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">전문 멘토 직접 작성</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        현직 네임드 스타트업 개발자이자<br>
+                        개발자 취업 전문 멘토<br>
+                        <span class="text-yellow-400 font-semibold">'개발자H'</span>가 직접 작성했습니다.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12 fade-in-up delay-600">
+                <div class="bg-gradient-to-r from-gray-800 to-gray-900 rounded-2xl p-8 border border-gray-600">
+                    <h3 class="text-2xl font-bold mb-4 text-white">✨ 개발자H는 누구인가요?</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        • 현직 네임드 스타트업 개발자<br>
+                        • 100명 이상의 개발자 취업 멘토링 경험<br>
+                        • 원티드, 패스트캠퍼스, 멋쟁이사자처럼 등 수많은 교육업체 협업 경험<br>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- 목차 Section -->
+    <section class="py-20 px-4">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 fade-in-up gradient-text">
+                📚 전자책 목차 미리보기
+            </h2>
+            
+            <div class="bg-gradient-to-br from-gray-900 via-black to-gray-900 rounded-3xl p-8 md:p-12 border border-gray-700 fade-in-up delay-200">
+                <div class="grid md:grid-cols-2 gap-8 lg:gap-16">
+                    <div>
+                        <h3 class="text-2xl font-bold mb-6 text-yellow-400">들어가며</h3>
+                        <ul class="space-y-4 text-gray-300">
+                            <li class="flex items-start">
+                                <span class="text-yellow-400 mr-2">▶</span>
+                                <span>100번 떨어진 수강생, 이력서 하나로 50개 면접을 받은 이유</span>
+                            </li>
+                        </ul>
+                        
+                        <h3 class="text-2xl font-bold mb-6 mt-10 text-yellow-400">이력서 작성 전, 필수 체크리스트</h3>
+                        <ul class="space-y-4 text-gray-300">
+                            <li class="flex items-start">
+                                <span class="text-yellow-400 mr-2">▶</span>
+                                <span>당신의 이력서, 프로젝트가 이대로라면 절대 합격 못합니다</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-yellow-400 mr-2">▶</span>
+                                <span>이력서를 만드는 이유</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-yellow-400 mr-2">▶</span>
+                                <span>이력서? 포트폴리오? 하나만 있어도 됩니다</span>
+                            </li>
+                        </ul>
+                        
+                        <h3 class="text-2xl font-bold mb-6 mt-10 text-yellow-400">개발자 취업의 큰 두가지 전략</h3>
+                        <ul class="space-y-4 text-gray-300">
+                            <li class="flex items-start">
+                                <span class="text-yellow-400 mr-2">▶</span>
+                                <span>빅테크 기업에서 원하는 인재</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-yellow-400 mr-2">▶</span>
+                                <span>스타트업에서 원하는 인재</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-yellow-400 mr-2">▶</span>
+                                <span>스나이퍼 전략</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-yellow-400 mr-2">▶</span>
+                                <span>샷건 전략</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-2xl font-bold mb-6 text-yellow-400">면접관의 뇌에 남는 이력서의 비밀</h3>
+                        <ul class="space-y-4 text-gray-300">
+                            <li class="flex items-start">
+                                <span class="text-yellow-400 mr-2">▶</span>
+                                <span>면접관의 '진짜' 속마음을 공개합니다</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-yellow-400 mr-2">▶</span>
+                                <span>이력서 첫인상을 결정하는 ㅇㅇㅇ</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-yellow-400 mr-2">▶</span>
+                                <span>면접관의 시선을 강탈하는 4단계 구성</span>
+                            </li>
+                        </ul>
+                        
+                        <h3 class="text-2xl font-bold mb-6 mt-10 text-yellow-400">실전! 이력서 만들기</h3>
+                        <ul class="space-y-4 text-gray-300">
+                            <li class="flex items-start">
+                                <span class="text-yellow-400 mr-2">▶</span>
+                                <span>시간을 2배 이상 단축시켜주는 도구들 (Canva, Figma, Google Slides)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-yellow-400 mr-2">▶</span>
+                                <span>토* 서류 합격한 개발자H의 실제 이력서 대공개</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-yellow-400 mr-2">▶</span>
+                                <span>면접관 뇌에 각인되는 첫 페이지 만드는 방법</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-yellow-400 mr-2">▶</span>
+                                <span>면접여부가 결정되는 OverView 페이지 만드는 방법</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-yellow-400 mr-2">▶</span>
+                                <span>기술면접을 유리하게 만드는 상세 페이지 만드는 방법</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-yellow-400 mr-2">▶</span>
+                                <span>면접이 지금 바로 잡히게 만드는 CTA 페이지 만드는 방법</span>
+                            </li>
+                        </ul>
+                        
+                        <h3 class="text-2xl font-bold mb-6 mt-10 text-yellow-400">마무리</h3>
+                        <ul class="space-y-4 text-gray-300">
+                            <li class="flex items-start">
+                                <span class="text-yellow-400 mr-2">▶</span>
+                                <span>자주 묻는 질문들</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-yellow-400 mr-2">▶</span>
+                                <span>마무리하며</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="mt-10 text-center">
+                    <p class="text-gray-400 italic">* 실제 목차는 일부 변경될 수 있습니다.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- CTA Section -->
+    <section id="cta" class="py-20 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="bg-gradient-to-br from-gray-900 via-black to-gray-900 rounded-3xl p-12 border border-gray-700 fade-in-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-8 gradient-text">
+                    🎁 뉴스레터 구독자만을 위한<br>
+                    <span class="text-yellow-400">특별 사전 이벤트</span>
+                </h2>
+                
+                <div class="mb-8">
+                    <div class="text-6xl font-black text-green-400 mb-4">50% 할인</div>
+                    <p class="text-xl text-gray-300">
+                        런칭 시 정가 66,000원 → <span class="text-red-500 line-through">66,000원</span> <span class="text-green-400 font-bold">33,000원</span>
+                    </p>
+                </div>
+                
+                <div class="bg-red-900 bg-opacity-30 border border-red-500 rounded-xl p-6 mb-8">
+                    <p class="text-red-300 font-semibold">
+                        ⚠️ 사전 예약은 뉴스레터 구독자에게만 제공됩니다<br>
+                        런칭 후에는 정가로만 판매됩니다
+                    </p>
+                </div>
+                
+                <button class="cta-button text-black px-12 py-5 rounded-2xl font-bold text-xl w-full md:w-auto hover:scale-105 transition-transform" 
+                        onclick="window.open('#', '_blank')">
+                    📧 지금 50% 할인쿠폰 받기
+                </button>
+                
+                <p class="text-sm text-gray-400 mt-6">
+                    * 신청 완료 후, 전자책 런칭시 쿠폰코드가 메일로 발송됩니다<br>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-4 border-t border-gray-800">
+        <div class="max-w-4xl mx-auto text-center">
+            <p class="text-gray-400">
+                © 2025 개발자H. All rights reserved.<br>
+                더 많은 개발자 취업 정보는 <a href="https://maily.so/developerh">뉴스레터</a>를 통해 만나보세요.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationPlayState = 'running';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all animated elements
+        document.addEventListener('DOMContentLoaded', () => {
+            const animatedElements = document.querySelectorAll('.fade-in-up, .fade-in-left, .fade-in-right');
+            animatedElements.forEach(el => {
+                el.style.animationPlayState = 'paused';
+                observer.observe(el);
+            });
+        });
+
+        // Smooth scrolling for internal links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
